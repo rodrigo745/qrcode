@@ -29,20 +29,20 @@ export default function Home() {
           <div className="z-50 azulClaroBg p-10 rounded-full scale-75 md:scale-100">
             <Image alt="code" width={300} height={300} src={src} className="z-50 rounded-3xl"/>
           </div>
-          <div className="z-50 flex justify-between text-lg text-white mt-2 md:mt-10">
-            <button className="z-50 azulMedioBg w-32 py-2 rounded-lg">Compartir</button>
-            <button onClick={mostrarCodigo} className="z-50 azulMedioBg w-32 py-2 rounded-lg">Volver</button>
+          <div className="z-50 flex justify-between text-lg text-white mt-2 md:mt-10 mx-8 md:mx-0">
+            <button className="z-50 azulMedioBg w-28 md:w-32 py-2 rounded-lg">Compartir</button>
+            <button onClick={mostrarCodigo} className="z-50 azulMedioBg w-28 md:w-32 py-2 rounded-lg">Volver</button>
           </div>
         </div>
         :
         <div className="z-50">
-          <div className="bg-black p-2 py-2 rounded-2xl border-2 azulMedioBorder z-10">
+          <div className="bg-black p-2 py-2 rounded-2xl border-2 azulMedioBorder z-10 flex">
             <input 
             type="text"
-            className="p-2 rounded-md  md:w-96 bg-black text-white outline-none"
+            className="p-1 md:p-2 rounded-md md:w-96 bg-black text-white outline-none"
             placeholder="Escribe tu url"
             onChange={(e)=> setTexto(e.target.value)}/>
-          <button className=" ml-4 text-white rounded-md azulMedioBg px-4 md:px-6 py-2 md:py-3 cursor-pointer" onClick={generarQR}>Generar</button>
+          <button className="ml-0 md:ml-4 text-white rounded-md azulMedioBg px-2 md:px-6 py-2 md:py-3 cursor-pointer" onClick={generarQR}>Generar</button>
           </div>
         </div>
         

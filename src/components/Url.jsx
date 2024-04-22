@@ -10,12 +10,13 @@ export default function Url(props){
     const [ src, setSrc ] = useState("");
     const [ mostrar, setMostrar ] = useState(false);
     const [ error, setError ] = useState(false);
-    
-    const generarQR = ()=>{
+
+    const generarQR = (e)=>{
       if(texto.length > 4){
-         QRCode.toDataURL(`${texto}`).then(setSrc);
+         QRCode.toDataURL(`https://${texto}`).then(setSrc);
          mostrar ? setMostrar(false) : setMostrar(true);
          setError(false);
+         e && setTexto("");
       } else{
         setError(true);
       }

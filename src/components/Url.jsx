@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 import QRCode from "qrcode";
 import CodigoQR from "./CodigoQR";
 import logoFondo from "../app/resource/bg-illustration.svg";
@@ -13,8 +12,7 @@ export default function Url(props){
     const [ error, setError ] = useState(false);
     
     const generarQR = ()=>{
-      console.log("asdasd")
-      if(texto.length > 12){
+      if(texto.length > 4){
          QRCode.toDataURL(`${texto}`).then(setSrc);
          mostrar ? setMostrar(false) : setMostrar(true);
          setError(false);

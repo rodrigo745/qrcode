@@ -2,7 +2,6 @@ import Image from "next/image";
 
 export default function CodigoQR(props) {
 
-
   return (
     <div>
       <div className="z-50 rounded-3xl">
@@ -17,7 +16,7 @@ export default function CodigoQR(props) {
         </div>
         <div className="z-50 flex justify-between text-lg text-white mt-2 md:mt-10 mx-8 md:mx-0">
           <button className="z-50 azulMedioBg w-28 md:w-32 py-2 rounded-lg">
-            Compartir
+            Guardar
           </button>
           <button
             onClick={props.mostrarCodigo}
